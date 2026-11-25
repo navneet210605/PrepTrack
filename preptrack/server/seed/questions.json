@@ -1,0 +1,902 @@
+[
+  {
+    "category": "DSA",
+    "topic": "Time Complexity",
+    "difficulty": "Easy",
+    "text": "What is the worst-case time complexity of searching for an element in an unsorted array of size N?",
+    "options": [
+      "O(1)",
+      "O(log N)",
+      "O(N)",
+      "O(N log N)"
+    ],
+    "correctIndex": 2,
+    "explanation": "In an unsorted array, linear search must inspect every element one by one in the worst case, requiring O(N) operations.",
+    "source": "PYQ"
+  },
+  {
+    "category": "DSA",
+    "topic": "Time Complexity",
+    "difficulty": "Medium",
+    "text": "What is the tight worst-case time complexity of QuickSort when the pivot is always chosen as the minimum or maximum element?",
+    "options": [
+      "O(N log N)",
+      "O(N)",
+      "O(N^2)",
+      "O(log N)"
+    ],
+    "correctIndex": 2,
+    "explanation": "When an extreme element is always chosen as pivot, the partition is unbalanced (size 0 and N-1), resulting in the recurrence T(N) = T(N-1) + O(N), which evaluates to O(N^2).",
+    "source": "PYQ"
+  },
+  {
+    "category": "DSA",
+    "topic": "Binary Search Trees",
+    "difficulty": "Easy",
+    "text": "Which tree traversal of a Binary Search Tree (BST) produces nodes in sorted ascending order?",
+    "options": [
+      "Preorder Traversal",
+      "Inorder Traversal",
+      "Postorder Traversal",
+      "Level Order Traversal"
+    ],
+    "correctIndex": 1,
+    "explanation": "Inorder traversal visits Left -> Root -> Right. Since in a BST all left elements are smaller and right elements larger than the root, inorder traversal yields sorted ascending keys.",
+    "source": "PYQ"
+  },
+  {
+    "category": "DSA",
+    "topic": "Binary Search Trees",
+    "difficulty": "Medium",
+    "text": "What is the worst-case time complexity for searching an element in a degenerated (skewed) Binary Search Tree with N nodes?",
+    "options": [
+      "O(log N)",
+      "O(N)",
+      "O(N log N)",
+      "O(1)"
+    ],
+    "correctIndex": 1,
+    "explanation": "A skewed BST degrades into a linear linked list where tree height is N - 1, making search time O(N). Balanced trees like AVL or Red-Black guarantee O(log N).",
+    "source": "PYQ"
+  },
+  {
+    "category": "DSA",
+    "topic": "Stacks & Queues",
+    "difficulty": "Easy",
+    "text": "Which data structure follows the Last-In-First-Out (LIFO) principle and is commonly used for function call stacks?",
+    "options": [
+      "Queue",
+      "Stack",
+      "Heap",
+      "Hash Table"
+    ],
+    "correctIndex": 1,
+    "explanation": "A Stack operates on LIFO principles where elements pushed last are popped first, making it ideal for call stack execution, undo mechanisms, and parentheses matching.",
+    "source": "PYQ"
+  },
+  {
+    "category": "DSA",
+    "topic": "Stacks & Queues",
+    "difficulty": "Hard",
+    "text": "What is the minimum number of single-ended queues required to implement a FIFO queue that supports O(1) amortized enqueue and dequeue?",
+    "options": [
+      "1 queue",
+      "2 stacks",
+      "2 queues",
+      "3 queues"
+    ],
+    "correctIndex": 1,
+    "explanation": "Implementing a FIFO queue using Stacks requires two stacks (input stack and output stack). While each element is moved at most twice, amortized time per operation is O(1).",
+    "source": "PYQ"
+  },
+  {
+    "category": "DSA",
+    "topic": "Linked Lists",
+    "difficulty": "Medium",
+    "text": "In Floyd's Cycle Detection Algorithm (Tortoise and Hare), what are the speeds of the slow and fast pointers?",
+    "options": [
+      "Slow moves 1 step, Fast moves 2 steps",
+      "Slow moves 1 step, Fast moves 3 steps",
+      "Slow moves 2 steps, Fast moves 4 steps",
+      "Slow and Fast both move 2 steps"
+    ],
+    "correctIndex": 0,
+    "explanation": "Floyd's algorithm uses a slow pointer advancing 1 node per iteration and a fast pointer advancing 2 nodes. If a cycle exists, the distance between them decreases by 1 in each step until they meet.",
+    "source": "PYQ"
+  },
+  {
+    "category": "DSA",
+    "topic": "Linked Lists",
+    "difficulty": "Easy",
+    "text": "What is the time complexity to insert a new node at the beginning of a singly linked list with head pointer?",
+    "options": [
+      "O(1)",
+      "O(N)",
+      "O(log N)",
+      "O(N^2)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Inserting at the head only requires updating the new node's next pointer to head and updating head to point to the new node, which is an O(1) constant time operation.",
+    "source": "PYQ"
+  },
+  {
+    "category": "DSA",
+    "topic": "Sorting Algorithms",
+    "difficulty": "Medium",
+    "text": "Which of the following sorting algorithms is stable and has an O(N log N) worst-case time complexity?",
+    "options": [
+      "Quick Sort",
+      "Heap Sort",
+      "Merge Sort",
+      "Selection Sort"
+    ],
+    "correctIndex": 2,
+    "explanation": "Merge Sort guarantees O(N log N) time complexity in all cases (worst, best, and average) and preserves the relative order of duplicate elements, making it stable.",
+    "source": "PYQ"
+  },
+  {
+    "category": "DSA",
+    "topic": "Sorting Algorithms",
+    "difficulty": "Hard",
+    "text": "What is the auxiliary space complexity of Merge Sort when implemented on an array?",
+    "options": [
+      "O(1)",
+      "O(log N)",
+      "O(N)",
+      "O(N log N)"
+    ],
+    "correctIndex": 2,
+    "explanation": "Standard array-based Merge Sort requires an auxiliary buffer of size O(N) to merge the divided sub-arrays before copying them back.",
+    "source": "PYQ"
+  },
+  {
+    "category": "DSA",
+    "topic": "Graphs",
+    "difficulty": "Medium",
+    "text": "Which graph traversal uses a queue data structure to find the shortest path in an unweighted graph?",
+    "options": [
+      "Depth First Search (DFS)",
+      "Breadth First Search (BFS)",
+      "Dijkstra's Algorithm",
+      "Topological Sort"
+    ],
+    "correctIndex": 1,
+    "explanation": "BFS explores vertices level by level using a FIFO queue. In an unweighted graph, the first time a destination vertex is reached corresponds to the minimum number of edges (shortest path).",
+    "source": "PYQ"
+  },
+  {
+    "category": "DSA",
+    "topic": "Graphs",
+    "difficulty": "Hard",
+    "text": "Which algorithm finds the single-source shortest path in a graph that may contain negative edge weights but NO negative weight cycles?",
+    "options": [
+      "Dijkstra's Algorithm",
+      "Prim's Algorithm",
+      "Bellman-Ford Algorithm",
+      "Kruskal's Algorithm"
+    ],
+    "correctIndex": 2,
+    "explanation": "Bellman-Ford relaxes all edges |V|-1 times and correctly handles negative edge weights, unlike Dijkstra's greedy approach. It also detects negative weight cycles.",
+    "source": "PYQ"
+  },
+  {
+    "category": "DSA",
+    "topic": "Dynamic Programming",
+    "difficulty": "Medium",
+    "text": "What are the two essential characteristics of a problem that indicate it can be solved using Dynamic Programming?",
+    "options": [
+      "Greedy choice property and divide and conquer",
+      "Overlapping subproblems and optimal substructure",
+      "Deterministic sorting and tree balancing",
+      "Linear time complexity and recursion"
+    ],
+    "correctIndex": 1,
+    "explanation": "Dynamic Programming applies when a problem exhibits Optimal Substructure (optimal solution comes from optimal sub-solutions) and Overlapping Subproblems (subproblems recur repeatedly).",
+    "source": "PYQ"
+  },
+  {
+    "category": "DSA",
+    "topic": "Dynamic Programming",
+    "difficulty": "Hard",
+    "text": "What is the time complexity to solve the 0/1 Knapsack problem with N items and maximum weight capacity W using bottom-up DP?",
+    "options": [
+      "O(N log N)",
+      "O(2^N)",
+      "O(N * W)",
+      "O(W^2)"
+    ],
+    "correctIndex": 2,
+    "explanation": "The 2D dynamic programming table has (N+1) rows and (W+1) columns, with each entry computed in O(1) time, yielding O(N * W) pseudo-polynomial time.",
+    "source": "PYQ"
+  },
+  {
+    "category": "DSA",
+    "topic": "Heaps & Hash Tables",
+    "difficulty": "Easy",
+    "text": "What is the average time complexity of searching a key in a Hash Map with a good hash function?",
+    "options": [
+      "O(1)",
+      "O(log N)",
+      "O(N)",
+      "O(N log N)"
+    ],
+    "correctIndex": 0,
+    "explanation": "With a uniform hash distribution and appropriate load factor, key-value lookup takes O(1) constant average time.",
+    "source": "PYQ"
+  },
+  {
+    "category": "Aptitude",
+    "topic": "Quantitative - Time and Work",
+    "difficulty": "Easy",
+    "text": "A can finish a work in 10 days and B can finish the same work in 15 days. Working together, in how many days will they complete the work?",
+    "options": [
+      "5 days",
+      "6 days",
+      "7 days",
+      "8 days"
+    ],
+    "correctIndex": 1,
+    "explanation": "A's 1-day work = 1/10. B's 1-day work = 1/15. Together 1 day = (1/10 + 1/15) = 5/30 = 1/6. Hence, both together finish the job in 6 days.",
+    "source": "PYQ"
+  },
+  {
+    "category": "Aptitude",
+    "topic": "Quantitative - Time and Work",
+    "difficulty": "Medium",
+    "text": "12 men can complete a project in 8 days. After 3 days, 4 more men join them. In how many more days will the remaining work be finished?",
+    "options": [
+      "3.75 days",
+      "4 days",
+      "4.5 days",
+      "5 days"
+    ],
+    "correctIndex": 0,
+    "explanation": "Total work = 12 * 8 = 96 man-days. Work done in 3 days = 12 * 3 = 36 man-days. Remaining work = 96 - 36 = 60 man-days. New workforce = 12 + 4 = 16 men. Days needed = 60 / 16 = 3.75 days.",
+    "source": "PYQ"
+  },
+  {
+    "category": "Aptitude",
+    "topic": "Quantitative - Speed and Distance",
+    "difficulty": "Easy",
+    "text": "A train 150 meters long is running at a speed of 54 km/h. How much time will it take to cross an electric pole?",
+    "options": [
+      "8 seconds",
+      "10 seconds",
+      "12 seconds",
+      "15 seconds"
+    ],
+    "correctIndex": 1,
+    "explanation": "Speed = 54 * (5/18) = 15 m/s. Distance to cross a point object is the train's own length = 150 m. Time = Distance / Speed = 150 / 15 = 10 seconds.",
+    "source": "PYQ"
+  },
+  {
+    "category": "Aptitude",
+    "topic": "Quantitative - Speed and Distance",
+    "difficulty": "Medium",
+    "text": "A person travels from city A to B at 40 km/h and returns from B to A at 60 km/h. What is the average speed for the entire journey?",
+    "options": [
+      "48 km/h",
+      "50 km/h",
+      "52 km/h",
+      "54 km/h"
+    ],
+    "correctIndex": 0,
+    "explanation": "When distances are equal, Average Speed = 2 * S1 * S2 / (S1 + S2) = 2 * 40 * 60 / (40 + 60) = 4800 / 100 = 48 km/h.",
+    "source": "PYQ"
+  },
+  {
+    "category": "Aptitude",
+    "topic": "Quantitative - Profit & Loss",
+    "difficulty": "Easy",
+    "text": "An article bought for Rs. 500 is sold for Rs. 600. What is the profit percentage?",
+    "options": [
+      "16.67%",
+      "20%",
+      "25%",
+      "15%"
+    ],
+    "correctIndex": 1,
+    "explanation": "Profit = Selling Price - Cost Price = 600 - 500 = Rs. 100. Profit % = (Profit / Cost Price) * 100 = (100 / 500) * 100 = 20%.",
+    "source": "PYQ"
+  },
+  {
+    "category": "Aptitude",
+    "topic": "Quantitative - Profit & Loss",
+    "difficulty": "Hard",
+    "text": "A dishonest dealer marks his goods 20% above cost price and allows a discount of 10%, but uses a 900-gram weight for 1 kg. What is his overall profit percentage?",
+    "options": [
+      "20%",
+      "25%",
+      "18%",
+      "22.2%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Let cost of 1000g be Rs. 1000. Marked Price = Rs. 1200. Selling Price after 10% discount = 1200 * 0.9 = Rs. 1080. But he delivers 900g whose cost is Rs. 900. Profit = 1080 - 900 = 180. Profit % = (180 / 900) * 100 = 20%.",
+    "source": "PYQ"
+  },
+  {
+    "category": "Aptitude",
+    "topic": "Quantitative - Percentages",
+    "difficulty": "Medium",
+    "text": "If the price of sugar increases by 25%, by what percentage must a household reduce its consumption so that total expenditure remains unchanged?",
+    "options": [
+      "20%",
+      "25%",
+      "16.67%",
+      "15%"
+    ],
+    "correctIndex": 0,
+    "explanation": "Percentage reduction formula: [R / (100 + R)] * 100 = [25 / (100 + 25)] * 100 = (25 / 125) * 100 = 20%.",
+    "source": "PYQ"
+  },
+  {
+    "category": "Aptitude",
+    "topic": "Logical - Number Series",
+    "difficulty": "Easy",
+    "text": "Find the next number in the sequence: 2, 6, 12, 20, 30, ?",
+    "options": [
+      "40",
+      "42",
+      "44",
+      "48"
+    ],
+    "correctIndex": 1,
+    "explanation": "Differences between consecutive terms are +4, +6, +8, +10. Next difference is +12. 30 + 12 = 42 (Also n*(n+1): 1*2=2, 2*3=6, 3*4=12, 4*5=20, 5*6=30, 6*7=42).",
+    "source": "PYQ"
+  },
+  {
+    "category": "Aptitude",
+    "topic": "Logical - Blood Relations",
+    "difficulty": "Medium",
+    "text": "Pointing to a photograph, a woman says: 'He is the son of the only son of my grandfather.' How is the man in the photograph related to the woman?",
+    "options": [
+      "Brother",
+      "Uncle",
+      "Cousin",
+      "Father"
+    ],
+    "correctIndex": 0,
+    "explanation": "Grandfather's only son is the woman's father. The son of her father is her brother.",
+    "source": "PYQ"
+  },
+  {
+    "category": "Aptitude",
+    "topic": "Logical - Syllogism",
+    "difficulty": "Medium",
+    "text": "Statements: All cats are animals. All animals are mammals. Conclusion I: All cats are mammals. Conclusion II: Some mammals are cats.",
+    "options": [
+      "Only conclusion I follows",
+      "Only conclusion II follows",
+      "Both conclusions I and II follow",
+      "Neither follows"
+    ],
+    "correctIndex": 2,
+    "explanation": "Cats are a subset of animals, which is a subset of mammals. Therefore, all cats are mammals (I follows) and some mammals are cats (II follows).",
+    "source": "PYQ"
+  },
+  {
+    "category": "Aptitude",
+    "topic": "Logical - Direction Sense",
+    "difficulty": "Easy",
+    "text": "Rohan walks 10 km North, turns left and walks 5 km, then turns left again and walks 10 km. In which direction and distance is he from the starting point?",
+    "options": [
+      "5 km West",
+      "5 km East",
+      "10 km West",
+      "5 km South"
+    ],
+    "correctIndex": 0,
+    "explanation": "North 10 km (+y), left is West 5 km (-x), left again is South 10 km (-y). Net displacement is 5 km West.",
+    "source": "PYQ"
+  },
+  {
+    "category": "Aptitude",
+    "topic": "Verbal - Vocabulary",
+    "difficulty": "Medium",
+    "text": "Choose the word most nearly OPPOSITE in meaning to 'METICULOUS':",
+    "options": [
+      "Careless",
+      "Thorough",
+      "Detailed",
+      "Accurate"
+    ],
+    "correctIndex": 0,
+    "explanation": "Meticulous means showing great attention to detail and very careful. The antonym is careless or negligent.",
+    "source": "PYQ"
+  },
+  {
+    "category": "Aptitude",
+    "topic": "Verbal - Sentence Correction",
+    "difficulty": "Medium",
+    "text": "Select the grammatically correct sentence:",
+    "options": [
+      "Neither of the boys were present at the meeting.",
+      "Neither of the boys was present at the meeting.",
+      "Neither of the boys have been present at the meeting.",
+      "Neither of the boys are present at the meeting."
+    ],
+    "correctIndex": 1,
+    "explanation": "'Neither' is a singular indefinite pronoun and takes a singular verb: 'was present', not 'were'.",
+    "source": "PYQ"
+  },
+  {
+    "category": "Aptitude",
+    "topic": "Quantitative - Probability",
+    "difficulty": "Hard",
+    "text": "Two fair six-sided dice are rolled simultaneously. What is the probability that the sum of the numbers is 8?",
+    "options": [
+      "5/36",
+      "1/6",
+      "7/36",
+      "1/9"
+    ],
+    "correctIndex": 0,
+    "explanation": "Total outcomes = 6 * 6 = 36. Pairs summing to 8: (2,6), (3,5), (4,4), (5,3), (6,2) -> 5 outcomes. Probability = 5/36.",
+    "source": "PYQ"
+  },
+  {
+    "category": "Aptitude",
+    "topic": "Quantitative - Permutations",
+    "difficulty": "Medium",
+    "text": "In how many distinct ways can the letters of the word 'LEADER' be arranged?",
+    "options": [
+      "720",
+      "360",
+      "120",
+      "180"
+    ],
+    "correctIndex": 1,
+    "explanation": "'LEADER' has 6 letters with 'E' repeating twice. Total permutations = 6! / 2! = 720 / 2 = 360.",
+    "source": "PYQ"
+  },
+  {
+    "category": "CS Core",
+    "topic": "Operating Systems",
+    "difficulty": "Easy",
+    "text": "What are the four necessary Coffman conditions required for a deadlock to occur in an operating system?",
+    "options": [
+      "Mutual Exclusion, Hold and Wait, No Preemption, Circular Wait",
+      "Paging, Segmentation, Swapping, Thrashing",
+      "Race Condition, Critical Section, Semaphore, Mutex",
+      "Process, Thread, Fiber, Coroutine"
+    ],
+    "correctIndex": 0,
+    "explanation": "Edward Coffman defined the 4 concurrent conditions: Mutual Exclusion, Hold and Wait, No Preemption, and Circular Wait. Breaking any one prevents deadlock.",
+    "source": "PYQ"
+  },
+  {
+    "category": "CS Core",
+    "topic": "Operating Systems",
+    "difficulty": "Medium",
+    "text": "What is the phenomenon called when the CPU spends more time swapping virtual pages in and out of disk than executing user instructions?",
+    "options": [
+      "Fragmentation",
+      "Thrashing",
+      "Deadlock",
+      "Starvation"
+    ],
+    "correctIndex": 1,
+    "explanation": "Thrashing occurs when the working set of active processes exceeds available physical RAM frames, causing continuous high page-fault frequency and near-zero CPU throughput.",
+    "source": "PYQ"
+  },
+  {
+    "category": "CS Core",
+    "topic": "Operating Systems",
+    "difficulty": "Hard",
+    "text": "In Banker's Algorithm for deadlock avoidance, which condition must hold for a state to be declared 'safe'?",
+    "options": [
+      "All processes must request resources in ascending order",
+      "There exists at least one sequence of process execution that allows every process to complete without deadlock",
+      "Total available resources must exceed total allocated resources",
+      "The OS must preempt lower priority processes immediately"
+    ],
+    "correctIndex": 1,
+    "explanation": "A state is safe if there exists a safe sequence <P1, P2, ... Pn> such that for each Pi, its maximum remaining resource demands can be satisfied by currently available plus held resources.",
+    "source": "PYQ"
+  },
+  {
+    "category": "CS Core",
+    "topic": "Operating Systems",
+    "difficulty": "Medium",
+    "text": "What is the primary difference between a process and a thread?",
+    "options": [
+      "Processes share memory by default; threads have completely isolated address spaces",
+      "Threads of the same process share code, data, and OS resources, but have independent program counters and stacks",
+      "Processes run only in user mode; threads run in kernel mode",
+      "Threads cannot run concurrently on multi-core CPUs"
+    ],
+    "correctIndex": 1,
+    "explanation": "A process has its own address space. Threads within a process share the heap, globals, and file descriptors, but maintain their own registers, stack, and program counter.",
+    "source": "PYQ"
+  },
+  {
+    "category": "CS Core",
+    "topic": "DBMS",
+    "difficulty": "Easy",
+    "text": "In relational database ACID properties, which property ensures that all operations within a transaction succeed or none do?",
+    "options": [
+      "Atomicity",
+      "Consistency",
+      "Isolation",
+      "Durability"
+    ],
+    "correctIndex": 0,
+    "explanation": "Atomicity follows the all-or-nothing rule: if any statement within a transaction fails, the entire transaction is rolled back leaving the database unchanged.",
+    "source": "PYQ"
+  },
+  {
+    "category": "CS Core",
+    "topic": "DBMS",
+    "difficulty": "Medium",
+    "text": "A relation is in Boyce-Codd Normal Form (BCNF) if and only if for every non-trivial functional dependency X -> Y:",
+    "options": [
+      "Y is a prime attribute",
+      "X is a superkey",
+      "X is a subset of Y",
+      "There are no multi-valued dependencies"
+    ],
+    "correctIndex": 1,
+    "explanation": "BCNF is a stricter form of 3NF. For any functional dependency X -> Y, the determinant X must be a superkey of the relation.",
+    "source": "PYQ"
+  },
+  {
+    "category": "CS Core",
+    "topic": "DBMS",
+    "difficulty": "Hard",
+    "text": "What is the difference between a B-Tree and a B+ Tree index data structure?",
+    "options": [
+      "B-Trees store records only in leaf nodes; B+ Trees store records in all nodes",
+      "B+ Trees store actual data pointers exclusively in leaf nodes and link leaf nodes sequentially via pointers",
+      "B-Trees have larger fanout than B+ Trees",
+      "B+ Trees do not support range queries"
+    ],
+    "correctIndex": 1,
+    "explanation": "In B+ Trees, internal nodes only store routing keys, allowing higher fanout. All records are stored in leaf nodes linked as a doubly linked list, which drastically accelerates sequential and range queries.",
+    "source": "PYQ"
+  },
+  {
+    "category": "CS Core",
+    "topic": "DBMS",
+    "difficulty": "Medium",
+    "text": "Which SQL isolation level prevents Dirty Reads and Non-Repeatable Reads, but may still allow Phantom Reads in ANSI SQL-92?",
+    "options": [
+      "Read Uncommitted",
+      "Read Committed",
+      "Repeatable Read",
+      "Serializable"
+    ],
+    "correctIndex": 2,
+    "explanation": "Repeatable Read locks read rows, preventing other transactions from modifying them. However, new rows inserted by concurrent transactions matching a range query (phantoms) can still appear.",
+    "source": "PYQ"
+  },
+  {
+    "category": "CS Core",
+    "topic": "Computer Networks",
+    "difficulty": "Easy",
+    "text": "Which OSI layer is responsible for end-to-end reliable data delivery, error recovery, flow control, and port addressing?",
+    "options": [
+      "Network Layer",
+      "Transport Layer",
+      "Data Link Layer",
+      "Session Layer"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Transport Layer (Layer 4, e.g. TCP and UDP) provides process-to-process communication, port multiplexing, segmentation, and flow control.",
+    "source": "PYQ"
+  },
+  {
+    "category": "CS Core",
+    "topic": "Computer Networks",
+    "difficulty": "Medium",
+    "text": "What are the flags exchanged during the standard TCP 3-Way Handshake connection establishment?",
+    "options": [
+      "SYN -> SYN-ACK -> ACK",
+      "ACK -> SYN -> ACK",
+      "FIN -> ACK -> FIN-ACK",
+      "RST -> SYN -> ACK"
+    ],
+    "correctIndex": 0,
+    "explanation": "Client sends SYN (synchronize sequence number). Server responds with SYN-ACK (acknowledging client's seq and sending its own). Client finishes with ACK.",
+    "source": "PYQ"
+  },
+  {
+    "category": "CS Core",
+    "topic": "Computer Networks",
+    "difficulty": "Hard",
+    "text": "Which routing algorithm uses the Bellman-Ford algorithm to share complete routing tables only with immediate neighbors?",
+    "options": [
+      "Link State Routing (OSPF)",
+      "Distance Vector Routing (RIP)",
+      "Border Gateway Protocol (BGP)",
+      "Dijkstra SPF"
+    ],
+    "correctIndex": 1,
+    "explanation": "Distance Vector protocols (like RIP) iteratively update routing distances using the Bellman-Ford equation by exchanging vectors only with direct neighbors, which is vulnerable to count-to-infinity.",
+    "source": "PYQ"
+  },
+  {
+    "category": "CS Core",
+    "topic": "Computer Networks",
+    "difficulty": "Medium",
+    "text": "Which protocol resolves a known 32-bit IP address into a 48-bit MAC physical hardware address on a local area network?",
+    "options": [
+      "DNS",
+      "DHCP",
+      "ARP",
+      "ICMP"
+    ],
+    "correctIndex": 2,
+    "explanation": "Address Resolution Protocol (ARP) broadcasts a request on the local subnet asking 'Who has IP X.X.X.X? Tell MAC Y:Y:Y:Y:Y:Y', mapping Network layer IP to Data Link layer MAC.",
+    "source": "PYQ"
+  },
+  {
+    "category": "CS Core",
+    "topic": "OOP",
+    "difficulty": "Easy",
+    "text": "Which object-oriented programming principle focuses on exposing only necessary interfaces while hiding internal implementation details?",
+    "options": [
+      "Polymorphism",
+      "Abstraction",
+      "Inheritance",
+      "Association"
+    ],
+    "correctIndex": 1,
+    "explanation": "Abstraction hides complexity by showing only relevant interface methods to the outside world, whereas encapsulation bundles data and methods together with access control.",
+    "source": "PYQ"
+  },
+  {
+    "category": "CS Core",
+    "topic": "OOP",
+    "difficulty": "Medium",
+    "text": "In C++ or Java, which mechanism enables runtime (dynamic) method dispatch?",
+    "options": [
+      "Method Overloading",
+      "Virtual Functions / Method Overriding",
+      "Static Binding",
+      "Friend Functions"
+    ],
+    "correctIndex": 1,
+    "explanation": "Runtime polymorphism is achieved via method overriding using virtual method tables (vtable/vptr in C++ or dynamic method resolution in Java), resolving the call based on runtime object type.",
+    "source": "PYQ"
+  },
+  {
+    "category": "CS Core",
+    "topic": "OOP",
+    "difficulty": "Hard",
+    "text": "According to the SOLID principles, what does the Liskov Substitution Principle (LSP) state?",
+    "options": [
+      "A class should have only one reason to change",
+      "Subtypes must be substitutable for their base types without altering the correctness of the program",
+      "Depend upon abstractions, not concretions",
+      "Clients should not be forced to depend on interfaces they do not use"
+    ],
+    "correctIndex": 1,
+    "explanation": "LSP states that objects of a superclass should be replaceable with objects of a subclass without affecting the correctness or execution guarantees of the application.",
+    "source": "PYQ"
+  },
+  {
+    "category": "Development",
+    "topic": "JavaScript",
+    "difficulty": "Easy",
+    "text": "What will be printed to the console: typeof NaN in JavaScript?",
+    "options": [
+      "'undefined'",
+      "'number'",
+      "'NaN'",
+      "'object'"
+    ],
+    "correctIndex": 1,
+    "explanation": "According to the IEEE 754 floating point standard and ECMAScript specifications, NaN stands for 'Not a Number' but its data type is officially 'number'.",
+    "source": "PYQ"
+  },
+  {
+    "category": "Development",
+    "topic": "JavaScript",
+    "difficulty": "Medium",
+    "text": "What is a closure in JavaScript?",
+    "options": [
+      "A function combined with references to its surrounding lexical environment",
+      "A method to close browser tabs programmatically",
+      "An asynchronous callback that executes only on window unload",
+      "A variable declared with const that cannot be reassigned"
+    ],
+    "correctIndex": 0,
+    "explanation": "A closure is the bundle of a function and lexical environment within which that function was declared, enabling the inner function to remember and access outer variables even after the outer function has returned.",
+    "source": "PYQ"
+  },
+  {
+    "category": "Development",
+    "topic": "JavaScript",
+    "difficulty": "Hard",
+    "text": "In the JavaScript Event Loop, what is the order of execution between microtasks and macrotasks?",
+    "options": [
+      "Macrotasks execute first, microtasks execute only after the entire call stack and all timers finish",
+      "After the current synchronous execution context empties, all microtasks (e.g. Promise callbacks) are drained before the next macrotask (e.g. setTimeout) executes",
+      "Microtasks and macrotasks are interleaved in round-robin order",
+      "Promises are macrotasks while setTimeout is a microtask"
+    ],
+    "correctIndex": 1,
+    "explanation": "The microtask queue (Promises, queueMicrotask, MutationObserver) has priority. Whenever the call stack is clear, the JS engine flushes the entire microtask queue before picking the next task from the macrotask/task queue.",
+    "source": "PYQ"
+  },
+  {
+    "category": "Development",
+    "topic": "React",
+    "difficulty": "Easy",
+    "text": "Which React hook is used to perform side effects such as data fetching, subscriptions, or manually manipulating the DOM?",
+    "options": [
+      "useState",
+      "useEffect",
+      "useMemo",
+      "useCallback"
+    ],
+    "correctIndex": 1,
+    "explanation": "useEffect lets you synchronize a component with external systems (network requests, browser APIs, timers) after render.",
+    "source": "PYQ"
+  },
+  {
+    "category": "Development",
+    "topic": "React",
+    "difficulty": "Medium",
+    "text": "Why should you never use array indices as keys in dynamic lists where items can be reordered, inserted, or deleted in React?",
+    "options": [
+      "Keys must be floating point numbers in React",
+      "Using indices can break component state and produce rendering bugs during reconciliation diffing",
+      "React will throw a runtime syntax error if an index is passed",
+      "Array indices consume excessive browser RAM"
+    ],
+    "correctIndex": 1,
+    "explanation": "React uses keys to identify which items have changed, been added, or removed. If index is used as key, reordering shifts the indices, causing React to mismatch component internal states and re-render incorrectly.",
+    "source": "PYQ"
+  },
+  {
+    "category": "Development",
+    "topic": "React",
+    "difficulty": "Hard",
+    "text": "What is the primary difference between useMemo and useCallback in React?",
+    "options": [
+      "useMemo caches the result of a function invocation; useCallback caches the function definition itself between renders",
+      "useMemo is for state updates; useCallback is for lifecycle effects",
+      "useMemo works only with strings; useCallback works with arrays",
+      "useCallback triggers asynchronous threads; useMemo is synchronous"
+    ],
+    "correctIndex": 0,
+    "explanation": "useMemo(() => computeValue(a, b), [a, b]) memoizes the computed value, while useCallback(fn, deps) memoizes the callback function instance to prevent unnecessary child re-renders.",
+    "source": "PYQ"
+  },
+  {
+    "category": "Development",
+    "topic": "Node.js",
+    "difficulty": "Easy",
+    "text": "What underlying C library handles non-blocking asynchronous I/O and the thread pool in Node.js?",
+    "options": [
+      "V8",
+      "libuv",
+      "glibc",
+      "Boost"
+    ],
+    "correctIndex": 1,
+    "explanation": "Node.js pairs Google's V8 JavaScript engine for code execution with the libuv multi-platform C library to manage asynchronous I/O, event loops, timers, and worker thread pools.",
+    "source": "PYQ"
+  },
+  {
+    "category": "Development",
+    "topic": "Node.js",
+    "difficulty": "Medium",
+    "text": "What is the purpose of middleware functions in an Express.js application?",
+    "options": [
+      "To compile JavaScript into WebAssembly",
+      "To access req, res, and next to modify request state, run validation, perform authentication, or terminate the request-response cycle",
+      "To directly partition MongoDB databases across shards",
+      "To style HTML templates on the client device"
+    ],
+    "correctIndex": 1,
+    "explanation": "Express middleware functions have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response pipeline.",
+    "source": "PYQ"
+  },
+  {
+    "category": "Development",
+    "topic": "Node.js",
+    "difficulty": "Hard",
+    "text": "How does Node.js handle CPU-intensive tasks without blocking the main event loop thread?",
+    "options": [
+      "It automatically runs all functions on multi-core GPU threads",
+      "By delegating CPU-bound tasks to Worker Threads (worker_threads module) or child processes",
+      "By increasing the default call stack size via process.env",
+      "Node.js cannot run CPU-intensive tasks under any circumstances"
+    ],
+    "correctIndex": 1,
+    "explanation": "Because the main JS thread is single-threaded, heavy computations block I/O. Offloading them to Worker Threads (using isolated V8 instances with shared memory) prevents event loop starvation.",
+    "source": "PYQ"
+  },
+  {
+    "category": "Development",
+    "topic": "MongoDB",
+    "difficulty": "Easy",
+    "text": "What format does MongoDB use internally to store schema-less documents on disk?",
+    "options": [
+      "Plain JSON text",
+      "BSON (Binary JSON)",
+      "XML",
+      "CSV"
+    ],
+    "correctIndex": 1,
+    "explanation": "MongoDB stores documents in BSON (Binary JSON), which extends JSON with data types like Date, ObjectId, Int32, Int64, and binary data, and provides fast traversal and encoding.",
+    "source": "PYQ"
+  },
+  {
+    "category": "Development",
+    "topic": "MongoDB",
+    "difficulty": "Medium",
+    "text": "In Mongoose, what is the key difference between embedding subdocuments and referencing documents using ObjectId?",
+    "options": [
+      "Embedding keeps data within one document for fast single-read access; referencing stores data in separate collections and requires .populate() to join",
+      "Embedded documents cannot have indexes",
+      "Referenced documents cannot exceed 16 KB in size",
+      "Mongoose does not support document referencing"
+    ],
+    "correctIndex": 0,
+    "explanation": "Embedding is ideal for 1-to-few bounded data accessed together (atomic writes, no joins). Referencing prevents document growth beyond the 16MB BSON limit and reduces data duplication for 1-to-many or many-to-many relationships.",
+    "source": "PYQ"
+  },
+  {
+    "category": "Development",
+    "topic": "MongoDB",
+    "difficulty": "Medium",
+    "text": "Which MongoDB aggregation stage is used to deconstruct an array field from the input documents to output a document for each element?",
+    "options": [
+      "$project",
+      "$match",
+      "$unwind",
+      "$lookup"
+    ],
+    "correctIndex": 2,
+    "explanation": "$unwind takes an array field from input documents and outputs one document for each element of the array, essential for grouping or filtering individual subdocument items.",
+    "source": "PYQ"
+  },
+  {
+    "category": "Development",
+    "topic": "MongoDB",
+    "difficulty": "Hard",
+    "text": "Which MongoDB update operator adds an element to an array only if that value does not already exist in the array?",
+    "options": [
+      "$push",
+      "$addToSet",
+      "$set",
+      "$concatArrays"
+    ],
+    "correctIndex": 1,
+    "explanation": "$addToSet treats the target array like a mathematical set, adding the element only if it does not already exist, preventing duplicate items in the array.",
+    "source": "PYQ"
+  },
+  {
+    "category": "Development",
+    "topic": "Web Security",
+    "difficulty": "Medium",
+    "text": "What are the three parts of a JSON Web Token (JWT) separated by dots?",
+    "options": [
+      "Header, Payload, Signature",
+      "Username, Password, Salt",
+      "Client, Server, Database",
+      "Hash, Nonce, Key"
+    ],
+    "correctIndex": 0,
+    "explanation": "A JWT consists of Header (algorithm & token type), Payload (user claims/id), and Signature (HMAC or RSA verification hash using the secret key).",
+    "source": "PYQ"
+  },
+  {
+    "category": "Development",
+    "topic": "Web Security",
+    "difficulty": "Hard",
+    "text": "Why is bcrypt preferred over plain SHA-256 for storing user passwords in a database?",
+    "options": [
+      "bcrypt compresses passwords into smaller byte arrays",
+      "bcrypt incorporates salt and is computationally slow with configurable work factor (cost), resisting brute-force and GPU hardware attacks",
+      "SHA-256 is deprecated by the W3C consortium",
+      "bcrypt encrypts passwords symmetrically so they can be decrypted later"
+    ],
+    "correctIndex": 1,
+    "explanation": "SHA-256 is designed for high speed (checking gigabytes of data per second on GPUs). bcrypt is an adaptive, slow hashing algorithm specifically engineered to make brute-force and rainbow table attacks computationally intractable.",
+    "source": "PYQ"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "name": "mongoproject-preptrack-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install-all": "npm.cmd install --prefix preptrack && npm.cmd run install-all --prefix preptrack",
+    "test": "npm.cmd run test --prefix preptrack",
+    "seed": "npm.cmd run seed --prefix preptrack",
+    "seed:demo": "npm.cmd run seed:demo --prefix preptrack",
+    "server": "npm.cmd run server --prefix preptrack",
+    "client": "npm.cmd run client --prefix preptrack",
+    "dev": "npm.cmd run dev --prefix preptrack",
+    "start": "npm.cmd run dev --prefix preptrack"
+  }
+}
